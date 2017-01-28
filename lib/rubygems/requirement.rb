@@ -51,7 +51,7 @@ class Gem::Requirement
   # If the input is "weird", the default version requirement is
   # returned.
 
-  def self.create input
+  def self.create *input
     case input
     when Gem::Requirement then
       input
