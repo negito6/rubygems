@@ -52,10 +52,10 @@ class Gem::Requirement
   # returned.
 
   def self.create *inputs
-    if inputs.length > 1
-      return create inputs
-    end
+    return create inputs if inputs.length > 1
+
     input = inputs.shift
+
     case input
     when Gem::Requirement then
       input
